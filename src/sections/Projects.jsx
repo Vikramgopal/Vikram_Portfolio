@@ -10,7 +10,7 @@ import { FaGithub } from "react-icons/fa";
 import { useRef } from "react";
 import { useState, useEffect } from "react";
 // import { message } from "../constant";
-const projects = ({ darkMode }) => {
+const Projects = ({ darkMode }) => {
   const nikepc = "src/assets/images/nikepc.png";
   const luxurypc = "src/assets/images/luxury-chronoluxe-pc.png";
   const pepsipc = "src/assets/images/pepsi-pc.png";
@@ -189,7 +189,7 @@ const projects = ({ darkMode }) => {
   );
 };
 
-export default projects;
+export default Projects;
 
 // eslint-disable-next-line react/prop-types, react-refresh/only-export-components
 const Example = ({ backgroundImage }) => {
