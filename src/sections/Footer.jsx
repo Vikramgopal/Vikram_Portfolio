@@ -255,7 +255,6 @@ const Footer = ({ isFullSize, setIsFullSize }) => {
   if (!isRemove || !isExit)
     return (
       <footer
-        id="contact"
         className={
           isFullSize
             ? "w-full md:h-[100vh] max-md:h-[60vh] "
