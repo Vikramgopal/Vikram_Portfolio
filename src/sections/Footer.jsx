@@ -171,6 +171,8 @@ import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { FiCheckCircle } from "react-icons/fi";
 import { terminal } from "../constant/index";
+import { FaArrowRight } from "react-icons/fa";
+import { PiTildeBold } from "react-icons/pi";
 
 const Footer = ({ isFullSize, setIsFullSize }) => {
   const [input, setInput] = useState("");
@@ -352,8 +354,12 @@ const Footer = ({ isFullSize, setIsFullSize }) => {
 
             {!showEmail && (
               <div className="flex items-center text-white mt-4 flex-wrap">
-                <p className="text-green text-lg font-bold">&rarr; ~ &nbsp;</p>
+                <span className="text-green flex flex-row gap-2 items-center justify-center pr-4">
+                  <FaArrowRight size={15} />
+                  <PiTildeBold size={15} />
+                </span>
                 <p>Enter Name:</p>
+
                 <input
                   type="text"
                   value={input}
@@ -370,7 +376,10 @@ const Footer = ({ isFullSize, setIsFullSize }) => {
               <div>
                 {showEmail && (
                   <div className="flex items-center text-white mt-4 flex-wrap ">
-                    <span className="text-green">&rarr; ~ </span>
+                    <span className="text-green flex flex-row gap-2 items-center justify-center pr-4">
+                      <FaArrowRight size={15} />
+                      <PiTildeBold size={15} />
+                    </span>
                     <p>Enter Email : </p>
                     <input
                       type="text"
@@ -390,9 +399,10 @@ const Footer = ({ isFullSize, setIsFullSize }) => {
               <div>
                 {showDescription && (
                   <div className="flex items-center text-white mt-4 flex-wrap">
-                    <p className="text-green text-lg font-bold">
-                      &rarr; ~ &nbsp;
-                    </p>
+                    <span className="text-green flex flex-row gap-2 items-center justify-center pr-4">
+                      <FaArrowRight size={15} />
+                      <PiTildeBold size={15} />
+                    </span>
                     <p>Enter Description:</p>
                     <input
                       type="text"

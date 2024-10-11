@@ -17,10 +17,6 @@ import luxurymbl from "../assets/images/luxury-mbl.png";
 import pepsimbl from "../assets/images/pepsi-mbl.png";
 // import { message } from "../constant";
 const Projects = ({ darkMode }) => {
-  // const nikepc = "src/assets/images/nikepc.png";
-  // const luxurypc = "src/assets/images/luxury-chronoluxe-pc.png";
-  // const pepsipc = "src/assets/images/pepsi-pc.png";
-
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [isMobile, setIsMobile] = useState(false);
 

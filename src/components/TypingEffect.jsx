@@ -43,7 +43,7 @@ const TypingEffect = ({
   return (
     <div className="text-lg font-mono text-green-600 whitespace-pre-wrap">
       {displayedText}
-      {/* // eslint-disable-next-line react/prop-types */}
+      {/* // eslint-disable-next-line react/prop-types */}, react/prop-types
       {currentParagraph < texts.length && (
         <span className="blinking-cursor">|</span>
       )}

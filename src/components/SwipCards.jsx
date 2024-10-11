@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { FaReact, FaBootstrap, FaGithub } from "react-icons/fa";
 import { RiTailwindCssFill, RiJavascriptFill } from "react-icons/ri";
@@ -51,7 +51,25 @@ const SwipeCards = ({ darkMode }) => {
 };
 
 // eslint-disable-next-line react/prop-types
-const Card = ({ id, body, url, title, cards, onCardSwipe }) => {
+const Card = ({ id, body, url, title, cards, onCardSwipe, isMobile }) => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [isSmall, setIsSmall] = useState(false);
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmall(window.innerWidth <= 640); // Tailwind's `sm` breakpoint is 640px
+    };
+
+    // Check screen size on initial render and on every resize
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const x = useMotionValue(0);
 
   const rotateRaw = useTransform(x, [-150, 150], [-18, 18]);
@@ -65,8 +83,13 @@ const Card = ({ id, body, url, title, cards, onCardSwipe }) => {
     return `${rotateRaw.get() + offset}deg`;
   });
 
-  const handleDragEnd = () => {
+  const handleDragEndPc = () => {
     if (Math.abs(x.get()) > 100) {
+      onCardSwipe(id); // Handle swipe and reset cards if needed
+    }
+  };
+  const handleDragEndMobile = () => {
+    if (Math.abs(x.get()) > 50) {
       onCardSwipe(id); // Handle swipe and reset cards if needed
     }
   };
@@ -118,7 +141,7 @@ const Card = ({ id, body, url, title, cards, onCardSwipe }) => {
         left: 0,
         right: 0,
       }}
-      onDragEnd={handleDragEnd}
+      onDragEnd={isSmall ? handleDragEndMobile : handleDragEndPc}
     >
       {/* <img
         src={url} // URL for Tailwind CSS icon

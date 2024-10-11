@@ -1,5 +1,7 @@
 import SwipeCards from "../components/SwipCards";
-
+import resume from "../assets/resume/Vikram.pdf.pdf";
+import { motion } from "framer-motion";
+import { FaFileDownload } from "react-icons/fa";
 // eslint-disable-next-line react/prop-types
 const Skills = ({ darkMode }) => {
   return (
@@ -60,17 +62,24 @@ const Skills = ({ darkMode }) => {
             </div> */}
 
             {/* <div className="grid min-h-[2px] place-content-center bg-slate-900 p-4"> */}
-            <button className=" group relative mt-6 px-4 py-2 dark:text-white text-black transition-colors duration-[400ms] font-bold hover:text-indigo-400">
-              <span>Download Resume</span>
-              {/* {/* TOP */}
-              <span className="absolute left-0 top-0 h-[4px] w-0 bg-indigo-300 transition-all duration-100 group-hover:w-full" />
-              {/* RIGHT */}
-              <span className="absolute right-0 top-0 h-0 w-[4px] bg-indigo-300 transition-all delay-100 duration-100 group-hover:h-full" />
-              {/* BOTTOM */}
-              <span className="absolute bottom-0 right-0 h-[4px] w-0 bg-indigo-300 transition-all delay-200 duration-100 group-hover:w-full" />
-              {/* LEFT */}
-              <span className="absolute bottom-0 left-0 h-0 w-[4px] bg-indigo-300 transition-all delay-300 duration-100 group-hover:h-full" />{" "}
-            </button>
+            {/* <button className=" group relative mt-6 px-4 py-2 dark:text-white text-black transition-colors duration-[400ms] font-bold hover:text-indigo-400">
+              <span>Download Resume</span> */}
+            {/* {/* TOP */}
+            {/* <span className="absolute left-0 top-0 h-[4px] w-0 bg-indigo-300 transition-all duration-100 group-hover:w-full" /> */}
+            {/* RIGHT */}
+            {/* <span className="absolute right-0 top-0 h-0 w-[4px] bg-indigo-300 transition-all delay-100 duration-100 group-hover:h-full" /> */}
+            {/* BOTTOM */}
+            {/* <span className="absolute bottom-0 right-0 h-[4px] w-0 bg-indigo-300 transition-all delay-200 duration-100 group-hover:w-full" /> */}
+            {/* LEFT */}
+            {/* <span className="absolute bottom-0 left-0 h-0 w-[4px] bg-indigo-300 transition-all delay-300 duration-100 group-hover:h-full" />{" "}
+            </button> */}
+            <motion.div className="mt-6 inline-flex items-center gap-3 flex-row px-4 py-2 rounded-3xl font-bold dark:bg-black dark:border-white dark:hover:bg-white dark:hover:text-black dark:text-white bg-white text-black border-2 hover:bg-black hover:text-white transition-all duration-300 border-black">
+              <a href={resume} target="blank" className="" download>
+                <span>Download Resume</span>
+                {/* <AiOutlineDownload size={25} /> */}
+              </a>
+              <FaFileDownload size={25} />
+            </motion.div>
 
             {/* </div> */}
           </div>
