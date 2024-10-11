@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { GrMail } from "react-icons/gr";
+import logo from "../assets/images/portfolio-fav.png";
 
 // eslint-disable-next-line react/prop-types
 const Nav = ({ darkMode, setDarkMode, isOpen, setIsOpen }) => {
@@ -9,7 +10,9 @@ const Nav = ({ darkMode, setDarkMode, isOpen, setIsOpen }) => {
       <nav className="flex duration-500 padding-x bg-white items-center h-[123px] max-lg:h-[110px] justify-between flex-row font-poppins text-xl font-semibold  text-black  dark:bg-black dark:text-white">
         <div>
           <ul className="flex flex-row  items-center max-xl:gap-10 gap-16 max-sm:gap-8 justify-start ">
-            <li>LOGO</li>
+            <li>
+              <img src={logo} width={70} height={50} alt="" />
+            </li>
             <a href="mailto:vikrambg02@gmail.com">
               <li className="rounded-2xl max-xl:hidden flex gap-2 items-center bg-white px-6 py-3 font-semibold dark:text-white dark:bg-black text-black duration-500  dark:hover:translate-x-[-4px] hover:translate-x-[-4px] hover:translate-y-[-4px] dark:hover:translate-y-[-4px] hover:rounded-md dark:hover:rounded-md hover:shadow-[4px_4px_0px_black] dark:hover:shadow-[4px_4px_0px_white] active:translate-x-[0px] dark:active:translate-x-[0px] active:translate-y-[0px] dark:active:translate-y-[0px] dark:active:rounded-2xl active:rounded-2xl active:shadow-none dark:active:shadow-none">
                 <GrMail size={25} />

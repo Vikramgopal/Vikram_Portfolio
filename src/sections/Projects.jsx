@@ -12,6 +12,9 @@ import { useState, useEffect } from "react";
 import nikepc from "../assets/images/nikepc.png";
 import luxurypc from "../assets/images/luxury-chronoluxe-pc.png";
 import pepsipc from "../assets/images/pepsi-pc.png";
+import nikembl from "../assets/images/nike-mbl.png";
+import luxurymbl from "../assets/images/luxury-mbl.png";
+import pepsimbl from "../assets/images/pepsi-mbl.png";
 // import { message } from "../constant";
 const Projects = ({ darkMode }) => {
   // const nikepc = "src/assets/images/nikepc.png";
@@ -47,7 +50,8 @@ const Projects = ({ darkMode }) => {
           <div className="sm:bg-gradient-to-br from-slate-100 to-slate-200 dark:text-black  max-sm:text-black max-sm:dark:text-white  sm:dark:bg-gradient-to-br dark:from-gray-50 dark:to-gray-100 max-sm:bg-white max-sm:dark:bg-black grid grid-cols-2 max-lg:grid-cols-1 gap-10 lg:gap-14 max-sm:gap-5 p-10 max-sm:p-0 rounded-3xl">
             <div className="flex justify-center  items-center">
               {" "}
-              <Example backgroundImage={nikepc} />
+              {!isMobile && <Example backgroundImage={nikepc} />}
+              {isMobile && <Example backgroundImage={nikembl} />}
             </div>
             <div>
               <h2 className="text-start font-bold  max-sm:px-2 py-12 text-2xl font-palanquin flex justify-between items-center ">
@@ -92,7 +96,7 @@ const Projects = ({ darkMode }) => {
           <div className="sm:bg-gradient-to-br from-slate-100 to-slate-200 dark:text-black  max-sm:text-black max-sm:dark:text-white  sm:dark:bg-gradient-to-br dark:from-gray-50 dark:to-gray-100 max-sm:bg-white max-sm:dark:bg-black grid grid-cols-2 max-lg:grid-cols-1 gap-10 lg:gap-14 max-sm:gap-5 p-10 max-sm:p-0 rounded-3xl">
             <div className="flex justify-center  items-center">
               {isMobile ? (
-                <Example backgroundImage={nikepc} />
+                <Example backgroundImage={pepsimbl} />
               ) : (
                 <Example backgroundImage={pepsipc} />
               )}
@@ -143,7 +147,11 @@ const Projects = ({ darkMode }) => {
           </div>
           <div className="sm:bg-gradient-to-br from-slate-100 to-slate-200 dark:text-black  max-sm:text-black max-sm:dark:text-white  sm:dark:bg-gradient-to-br dark:from-gray-50 dark:to-gray-100 max-sm:bg-white max-sm:dark:bg-black grid grid-cols-2 max-lg:grid-cols-1 gap-10 lg:gap-14 max-sm:gap-5 p-10 max-sm:p-0 rounded-3xl">
             <div className="flex justify-center  items-center">
-              <Example backgroundImage={luxurypc} />
+              {isMobile ? (
+                <Example backgroundImage={luxurymbl} />
+              ) : (
+                <Example backgroundImage={luxurypc} />
+              )}
             </div>
             <div>
               <h2 className="text-start font-bold  max-sm:px-2 py-12 text-2xl font-palanquin flex justify-between items-center ">
