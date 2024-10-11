@@ -9,11 +9,14 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { useRef } from "react";
 import { useState, useEffect } from "react";
+import nikepc from "../assets/images/nikepc.png";
+import luxurypc from "../assets/images/luxury-chronoluxe-pc.png";
+import pepsipc from "../assets/images/pepsi-pc.png";
 // import { message } from "../constant";
 const Projects = ({ darkMode }) => {
-  const nikepc = "src/assets/images/nikepc.png";
-  const luxurypc = "src/assets/images/luxury-chronoluxe-pc.png";
-  const pepsipc = "src/assets/images/pepsi-pc.png";
+  // const nikepc = "src/assets/images/nikepc.png";
+  // const luxurypc = "src/assets/images/luxury-chronoluxe-pc.png";
+  // const pepsipc = "src/assets/images/pepsi-pc.png";
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [isMobile, setIsMobile] = useState(false);

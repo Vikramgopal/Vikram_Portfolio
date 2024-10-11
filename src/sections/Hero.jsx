@@ -9,7 +9,7 @@ const Hero = ({ darkMode }) => {
       id="home"
       className={`${darkMode && "dark"}  transition-all duration-500`}
     >
-      <div className=" grid grid-cols-2 max-lg:grid-cols-1 bg-violet-500">
+      <div className=" grid grid-cols-2 max-lg:grid-cols-1 max-sm:pb-8 ">
         <div className="bg-white dark:bg-black dark:text-white duration-500 hero-text-grid text-black flex pt-5 max-lg:pt-0 justify-center items-center flex-col">
           <motion.div
             initial={{ scale: 0 }}

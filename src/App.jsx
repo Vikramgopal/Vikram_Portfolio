@@ -5,6 +5,7 @@ import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Footer from "./sections/Footer";
 import { useState } from "react";
+import terminalbg from "./assets/images/bg8.jpg";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -36,10 +37,11 @@ const App = () => {
         </section>
 
         <section
+          style={{ backgroundImage: `url(${terminalbg})` }}
           className={
             isFullSize
               ? "h-[100vh] max-md:h-[60vh] bg-bg3 bg-cover bg-center"
-              : " max-md:p-0 max-md:max-w-full md:padding-x md:padding-y max-md:h-[60vh] h-[100vh] bg-bg3 bg-cover bg-center "
+              : " max-md:p-0 max-md:max-w-full md:padding-x md:padding-y max-md:h-[60vh] h-[100vh]  bg-cover bg-center "
           }
         >
           <Footer isFullSize={isFullSize} setIsFullSize={setIsFullSize} />
