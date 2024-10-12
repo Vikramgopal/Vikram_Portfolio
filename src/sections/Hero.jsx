@@ -140,7 +140,7 @@ const Hero = ({ darkMode }) => {
               className="button-card hover:text-white hover:bg-black dark:hover:text-black dark:hover:bg-white bg-slate-gray dark:bg-slate-white duration-500 dark:text-slate-gray text-slate-white "
             >
               <AiFillGithub size={25} />
-              <span className="max-sm:hidden">Github</span>
+              <span className="">Github</span>
             </a>
             <a
               href="https://www.linkedin.com/in/vikrambg/"
@@ -149,7 +149,7 @@ const Hero = ({ darkMode }) => {
             >
               <AiFillLinkedin size="25" />
 
-              <span className="max-sm:hidden">LinkedIn</span>
+              <span className="">LinkedIn</span>
             </a>
           </motion.div>
           <a href="mailto:vikrambg02@gmail.com">

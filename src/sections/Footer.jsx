@@ -173,6 +173,7 @@ import { FiCheckCircle } from "react-icons/fi";
 import { terminal } from "../constant/index";
 import { FaArrowRight } from "react-icons/fa";
 import { PiTildeBold } from "react-icons/pi";
+import emailjs from "emailjs-com";
 
 const Footer = ({ isFullSize, setIsFullSize }) => {
   const [input, setInput] = useState("");
@@ -184,6 +185,7 @@ const Footer = ({ isFullSize, setIsFullSize }) => {
   const [showData, setShowData] = useState(false);
   const [isRemove, setIsRemove] = useState(false);
   const [isExit, setIsExit] = useState(false);
+  // const [sendMessage, setSendMessage] = useState("Send it!");
 
   const handleCommand = (e) => {
     if (e.key === "Enter") {
@@ -214,7 +216,8 @@ const Footer = ({ isFullSize, setIsFullSize }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("data is submitted");
+    alert("Successfully submitted!");
+    // setSendMessage("Sent");
   };
   const handleReset = (e) => {
     e.preventDefault();
@@ -438,16 +441,16 @@ const Footer = ({ isFullSize, setIsFullSize }) => {
                 <div className="flex flex-row gap-3 mt-2">
                   <button
                     onClick={handleReset}
-                    className="bg-white text-black rounded-lg p-1"
+                    className="bg-white text-black rounded-lg px-2 py-1"
                   >
                     Restart
                   </button>
-                  <button
+                  <motion.button
                     onClick={handleSubmit}
-                    className="bg-black text-white rounded-lg p-2"
+                    className="bg-black text-white rounded-lg py-1 px-2"
                   >
                     Send it!
-                  </button>
+                  </motion.button>
                 </div>
               </div>
             )}

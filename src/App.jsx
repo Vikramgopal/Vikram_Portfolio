@@ -37,7 +37,7 @@ const App = () => {
         </section>
 
         <section
-          id="#contact"
+          id="contact"
           style={{ backgroundImage: `url(${terminalbg})` }}
           className={
             isFullSize
