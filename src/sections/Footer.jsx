@@ -167,13 +167,12 @@
 
 ///////////////////////////////////////////////////////////////////////
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FiCheckCircle } from "react-icons/fi";
 import { terminal } from "../constant/index";
 import { FaArrowRight } from "react-icons/fa";
 import { PiTildeBold } from "react-icons/pi";
-import emailjs from "emailjs-com";
 
 const Footer = ({ isFullSize, setIsFullSize }) => {
   const [input, setInput] = useState("");
@@ -185,7 +184,32 @@ const Footer = ({ isFullSize, setIsFullSize }) => {
   const [showData, setShowData] = useState(false);
   const [isRemove, setIsRemove] = useState(false);
   const [isExit, setIsExit] = useState(false);
+  const [clickedInside, setIsClickedInside] = useState(false);
   // const [sendMessage, setSendMessage] = useState("Send it!");
+
+  const boxRef = useRef(null);
+
+  const handleClickOutside = (event) => {
+    if (boxRef.current && !boxRef.current.contains(event.target)) {
+      // Click outside the box
+      setIsClickedInside(false);
+    }
+  };
+
+  const handleClickInside = () => {
+    // Click inside the box
+    setIsClickedInside(true);
+  };
+
+  useEffect(() => {
+    // Attach listener when the component is mounted
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Clean up the listener when the component is unmounted
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const handleCommand = (e) => {
     if (e.key === "Enter") {
@@ -258,6 +282,8 @@ const Footer = ({ isFullSize, setIsFullSize }) => {
   if (!isRemove || !isExit)
     return (
       <footer
+        ref={boxRef}
+        onClick={handleClickInside}
         className={
           isFullSize
             ? "w-full md:h-[100vh] max-md:h-[60vh] "
@@ -276,15 +302,27 @@ const Footer = ({ isFullSize, setIsFullSize }) => {
           <div className="flex flex-row gap-1">
             <span
               onClick={handleExit}
-              className="bg-red-500 h-3 w-3 rounded-full"
+              className={
+                clickedInside
+                  ? "bg-red-500 h-3 w-3 rounded-full"
+                  : "bg-gray-600 h-3 w-3 rounded-full"
+              }
             ></span>
             <span
               onClick={handleRemove}
-              className="bg-yellow-500 h-3 w-3 rounded-full"
+              className={
+                clickedInside
+                  ? "bg-yellow-500 h-3 w-3 rounded-full"
+                  : "bg-gray-600 h-3 w-3 rounded-full"
+              }
             ></span>
             <span
               onClick={handleResize}
-              className="bg-green h-3 w-3 rounded-full"
+              className={
+                clickedInside
+                  ? "bg-green h-3 w-3 rounded-full"
+                  : "bg-gray-600 h-3 w-3 rounded-full"
+              }
             ></span>
           </div>
 
