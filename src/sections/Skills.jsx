@@ -1,5 +1,5 @@
 import SwipeCards from "../components/SwipCards";
-import resume from "../assets/resume/Vikram.pdf.pdf";
+import resume from "../assets/resume/Vikram.pdf";
 import { motion } from "framer-motion";
 import { FaFileDownload } from "react-icons/fa";
 // eslint-disable-next-line react/prop-types
