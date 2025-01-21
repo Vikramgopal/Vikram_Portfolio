@@ -15,6 +15,8 @@ import pepsipc from "../assets/images/pepsi-pc.png";
 import nikembl from "../assets/images/nike-mbl.png";
 import luxurymbl from "../assets/images/luxury-mbl.png";
 import pepsimbl from "../assets/images/pepsi-mbl.png";
+import lendandlearnpc from "../assets/images/lendandlearn-pc.png";
+import lendandlearnmbl from "../assets/images/lendandlearn-mbl.png";
 // import { message } from "../constant";
 const Projects = ({ darkMode }) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -42,7 +44,51 @@ const Projects = ({ darkMode }) => {
           {" "}
           My Projects
         </h1>
-        <div className="grid grid-rows-3 gap-10">
+        <div className="grid grid-rows-4 gap-10">
+          <div className="sm:bg-gradient-to-br from-slate-100 to-slate-200 dark:text-black  max-sm:text-black max-sm:dark:text-white  sm:dark:bg-gradient-to-br dark:from-gray-50 dark:to-gray-100 max-sm:bg-white max-sm:dark:bg-black grid grid-cols-2 max-lg:grid-cols-1 gap-10 lg:gap-14 max-sm:gap-5 p-10 max-sm:p-0 rounded-3xl">
+            <div className="flex justify-center  items-center">
+              {" "}
+              {!isMobile && <Example backgroundImage={lendandlearnpc} />}
+              {isMobile && <Example backgroundImage={lendandlearnmbl} />}
+            </div>
+            <div>
+              <h2 className="text-start font-bold  max-sm:px-2 py-12 text-2xl font-palanquin flex justify-between items-center ">
+                <a
+                  href="https://lendandlearn.netlify.app/"
+                  className="flex items-center cursor-pointer  gap-2"
+                >
+                  Lend & Learn
+                  <FaExternalLinkAlt className="pt-1" size={25} />
+                </a>
+                <a href="https://github.com/Vikramgopal/Nike">
+                  <FaGithub size={30} />
+                </a>
+              </h2>
+              <p className="text-start font-inter  max-sm:px-2 text-gray-500 dark:text-neutral-900 max-sm:dark:text-neutral-300 leading-1 text-lg">
+                <span className="text-[red] font-poppins text-lg  font-semibold">
+                  Description:
+                </span>{" "}
+                Lend & Learn is a user-friendly website designed to streamline
+                library operations. It features intuitive forms for adding
+                members, managing staff, cataloging books, and tracking
+                transactions. The site includes a robust issue and return system
+                with logical validations to ensure accurate record-keeping.
+                Built with a focus on simplicity and efficiency, the system
+                delivers a seamless experience for library staff. Its clean
+                design and responsive interface make it accessible across
+                devices, while its practical functionality improves day-to-day
+                library management processes.
+              </p>
+              <div className="flex flex-row gap-5 py-10 flex-wrap  max-sm:px-2">
+                <button className=" px-4 py-2 rounded-full  flex items-center gap-2  bg-white   text-slate-500 shadow-[-5px_-5px_10px_rgba(255,_255,_255,_0.8),_5px_5px_10px_rgba(0,_0,_0,_0.25)] max-sm:dark:shadow-[-5px_-5px_10px_rgba(255,_255,_255,_0.1),_5px_5px_15px_rgba(0,_0,_0,_0.8)] max-sm:dark:hover:hover:shadow-[-2px_-2px_5px_rgba(255,_255,_255,_0.1),_2px_2px_5px_rgba(0,_0,_0,_0.6),inset_-2px_-2px_5px_rgba(255,_255,_255,_0.2),inset_2px_2px_5px_rgba(0,_0,_0,_0.7)] max-sm:dark:bg-slate-300 max-sm:dark:text-slate-900 transition-all hover:shadow-[-1px_-1px_5px_rgba(255,_255,_255,_0.6),_1px_1px_5px_rgba(0,_0,_0,_0.3),inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] hover:text-violet-500">
+                  React JS
+                </button>
+                <button className=" px-4 py-2 rounded-full  flex items-center gap-2  bg-white   text-slate-500 shadow-[-5px_-5px_10px_rgba(255,_255,_255,_0.8),_5px_5px_10px_rgba(0,_0,_0,_0.25)] max-sm:dark:shadow-[-5px_-5px_10px_rgba(255,_255,_255,_0.1),_5px_5px_15px_rgba(0,_0,_0,_0.8)] max-sm:dark:hover:hover:shadow-[-2px_-2px_5px_rgba(255,_255,_255,_0.1),_2px_2px_5px_rgba(0,_0,_0,_0.6),inset_-2px_-2px_5px_rgba(255,_255,_255,_0.2),inset_2px_2px_5px_rgba(0,_0,_0,_0.7)] max-sm:dark:bg-slate-300 max-sm:dark:text-slate-900 transition-all hover:shadow-[-1px_-1px_5px_rgba(255,_255,_255,_0.6),_1px_1px_5px_rgba(0,_0,_0,_0.3),inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] hover:text-violet-500">
+                  Tailwind CSS
+                </button>
+              </div>
+            </div>
+          </div>
           <div className="sm:bg-gradient-to-br from-slate-100 to-slate-200 dark:text-black  max-sm:text-black max-sm:dark:text-white  sm:dark:bg-gradient-to-br dark:from-gray-50 dark:to-gray-100 max-sm:bg-white max-sm:dark:bg-black grid grid-cols-2 max-lg:grid-cols-1 gap-10 lg:gap-14 max-sm:gap-5 p-10 max-sm:p-0 rounded-3xl">
             <div className="flex justify-center  items-center">
               {" "}
