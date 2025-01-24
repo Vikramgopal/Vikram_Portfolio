@@ -51,28 +51,7 @@ const Skills = ({ darkMode }) => {
                 smooth scroll animations to enhance user experience.
               </li>
             </ul>
-            {/* <div className="mt-6">
-              <a
-                href="/resume.pdf" // Path to the resume file in the public folder
-                download="Vikram-Resume.pdf" // Download attribute to specify file name
-                className="bg-green-500 hover:bg-green-600 text-gray-900 dark:text-neutral-200 border-2 border-blue-500 font-bold py-2 px-4 rounded inline-block"
-              >
-                Download Resume
-              </a>
-            </div> */}
 
-            {/* <div className="grid min-h-[2px] place-content-center bg-slate-900 p-4"> */}
-            {/* <button className=" group relative mt-6 px-4 py-2 dark:text-white text-black transition-colors duration-[400ms] font-bold hover:text-indigo-400">
-              <span>Download Resume</span> */}
-            {/* {/* TOP */}
-            {/* <span className="absolute left-0 top-0 h-[4px] w-0 bg-indigo-300 transition-all duration-100 group-hover:w-full" /> */}
-            {/* RIGHT */}
-            {/* <span className="absolute right-0 top-0 h-0 w-[4px] bg-indigo-300 transition-all delay-100 duration-100 group-hover:h-full" /> */}
-            {/* BOTTOM */}
-            {/* <span className="absolute bottom-0 right-0 h-[4px] w-0 bg-indigo-300 transition-all delay-200 duration-100 group-hover:w-full" /> */}
-            {/* LEFT */}
-            {/* <span className="absolute bottom-0 left-0 h-0 w-[4px] bg-indigo-300 transition-all delay-300 duration-100 group-hover:h-full" />{" "}
-            </button> */}
             <motion.div className="mt-6 inline-flex items-center gap-3 flex-row px-4 py-2 rounded-3xl font-bold dark:bg-black dark:border-white dark:hover:bg-white dark:hover:text-black dark:text-white bg-white text-black border-2 hover:bg-black hover:text-white transition-all duration-300 border-black">
               <a href={resume} target="blank" className="" download>
                 <span>Download Resume</span>
@@ -93,26 +72,3 @@ const Skills = ({ darkMode }) => {
 };
 
 export default Skills;
-
-// const DrawOutlineButton = ({ children, ...rest }) => {
-//   return (
-//     <button
-//       {...rest}
-//       className="group relative px-4 py-2 font-medium text-slate-100 transition-colors duration-[400ms] hover:text-indigo-300"
-//     >
-//       <span>{children}</span>
-
-//       {/* TOP */}
-//       <span className="absolute left-0 top-0 h-[2px] w-0 bg-indigo-300 transition-all duration-100 group-hover:w-full" />
-
-//       {/* RIGHT */}
-//       <span className="absolute right-0 top-0 h-0 w-[2px] bg-indigo-300 transition-all delay-100 duration-100 group-hover:h-full" />
-
-//       {/* BOTTOM */}
-//       <span className="absolute bottom-0 right-0 h-[2px] w-0 bg-indigo-300 transition-all delay-200 duration-100 group-hover:w-full" />
-
-//       {/* LEFT */}
-//       <span className="absolute bottom-0 left-0 h-0 w-[2px] bg-indigo-300 transition-all delay-300 duration-100 group-hover:h-full" />
-//     </button>
-//   );
-// };

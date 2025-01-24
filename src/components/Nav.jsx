@@ -34,18 +34,6 @@ const Nav = ({ darkMode, setDarkMode, isOpen, setIsOpen }) => {
                 </motion.div>
               )}
             </li>
-            {/* <li>
-              <label className="relative inline-flex items-center cursor-pointer">
-                <input
-                  type="checkbox"
-                  className="sr-only peer"
-                  checked={darkMode}
-                  onChange={() => setDarkMode(!darkMode)}
-                />
-                <div className="w-14 h-8 bg-gray-200 rounded-full peer-checked:bg-indigo-600 peer-checked:bg-gradient-to-r from-indigo-600 to-pink-500 peer-focus:ring-2 peer-focus:ring-offset-2 ring-indigo-600 ring-offset-indigo-100 duration-300 ease-in-out"></div>
-                <div className="absolute left-1 top-1 bg-white w-6 h-6 rounded-full shadow-md peer-checked:translate-x-6 transform transition-transform duration-300 ease-in-out"></div>
-              </label>
-            </li> */}
           </ul>
         </div>
 
@@ -173,88 +161,6 @@ const Nav = ({ darkMode, setDarkMode, isOpen, setIsOpen }) => {
             </ul>
           </motion.div>
         ) : (
-          // <motion.div
-          //   initial={{ opacity: 1 }}
-          //   animate={{ opacity: 0 }}
-          //   transition={{
-          //     delay: 0.8,
-          //     duration: 0.5,
-          //   }}
-          //   className="absolute duration-500 lg:hidden flex z-10 flex-row justify-center top-[1.81%] text-black dark:bg-black dark:text-white bg-white w-full left-0 pb-4 max-sm:top-[1.74%]"
-          // >
-          //   <ul>
-          //     <a href="#home">
-          //       <motion.li
-          //         initial={{ opacity: 1, y: 0 }}
-          //         animate={{ opacity: 0, y: -20 }}
-          //         transition={{
-          //           // delay: 0.2,
-          //           duration: 0.5,
-          //         }}
-          //         onClick={() => setIsOpen(!isOpen)}
-          //         className="p-5 "
-          //       >
-          //         Home
-          //       </motion.li>
-          //     </a>
-          //     <a href="#about">
-          //       <motion.li
-          //         initial={{ opacity: 1, y: 0 }}
-          //         animate={{ opacity: 0, y: -20 }}
-          //         transition={{
-          //           delay: 0.2,
-          //           duration: 0.5,
-          //         }}
-          //         onClick={() => setIsOpen(!isOpen)}
-          //         className="p-5 "
-          //       >
-          //         About
-          //       </motion.li>
-          //     </a>
-          //     <a href="#skills">
-          //       <motion.li
-          //         initial={{ opacity: 1, y: 0 }}
-          //         animate={{ opacity: 0, y: -20 }}
-          //         transition={{
-          //           delay: 0.3,
-          //           duration: 0.5,
-          //         }}
-          //         onClick={() => setIsOpen(!isOpen)}
-          //         className="p-5 "
-          //       >
-          //         Skills
-          //       </motion.li>
-          //     </a>
-          //     <a href="#projects">
-          //       <motion.li
-          //         initial={{ opacity: 1, y: 0 }}
-          //         animate={{ opacity: 0, y: -20 }}
-          //         transition={{
-          //           delay: 0.4,
-          //           duration: 0.5,
-          //         }}
-          //         onClick={() => setIsOpen(!isOpen)}
-          //         className="p-5 "
-          //       >
-          //         Projects
-          //       </motion.li>
-          //     </a>
-          //     <a href="#contact">
-          //       <motion.li
-          //         initial={{ opacity: 1, y: 0 }}
-          //         animate={{ opacity: 0, y: -20 }}
-          //         transition={{
-          //           delay: 0.5,
-          //           duration: 0.5,
-          //         }}
-          //         onClick={() => setIsOpen(!isOpen)}
-          //         className="p-5 "
-          //       >
-          //         Contact
-          //       </motion.li>
-          //     </a>
-          //   </ul>
-          // </motion.div>
           ""
         )}
       </nav>
@@ -421,26 +327,3 @@ const VARIANTS = {
     },
   },
 };
-
-// function DarkModeToggle() {
-//   const [darkMode, setDarkMode] = useState(false);
-
-//   const toggleDarkMode = () => {
-//     setDarkMode(!darkMode);
-//   };
-
-//   return (
-//     <div className="flex items-center justify-center h-screen">
-//       <label className="relative inline-flex items-center cursor-pointer">
-//         <input
-//           type="checkbox"
-//           className="sr-only peer"
-//           checked={darkMode}
-//           onChange={toggleDarkMode}
-//         />
-//         <div className="w-14 h-8 bg-gray-200 rounded-full peer-checked:bg-indigo-600 peer-checked:bg-gradient-to-r from-indigo-600 to-pink-500 peer-focus:ring-2 peer-focus:ring-offset-2 ring-indigo-600 ring-offset-indigo-100 duration-300 ease-in-out"></div>
-//         <div className="absolute left-1 top-1 bg-white w-6 h-6 rounded-full shadow-md peer-checked:translate-x-6 transform transition-transform duration-300 ease-in-out"></div>
-//       </label>
-//     </div>
-//   );
-// }

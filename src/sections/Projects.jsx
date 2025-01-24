@@ -309,25 +309,7 @@ const TiltCard = ({ backgroundImage }) => {
           backgroundImage: `url(${backgroundImage})`,
         }}
         className={`absolute inset-4 grid place-content-center  bg-center bg-cover rounded-xl  shadow-lg`}
-      >
-        {/* <FiMousePointer
-          style={{
-            transform: "translateZ(75px)",
-          }}
-          className="mx-auto text-4xl"
-        /> */}
-        {/* <div> */}
-        {/* <img src={message} alt="" /> */}
-        {/* <p
-            style={{
-              transform: "translateZ(50px)",
-            }}
-            className="text-center text-2xl font-bold"
-          >
-            HOVER ME
-          </p> */}
-        {/* </div> */}
-      </div>
+      ></div>
     </motion.div>
   );
 };

@@ -333,19 +333,3 @@ const Footer = ({ isFullSize, setIsFullSize }) => {
 };
 
 export default Footer;
-
-// const VerticalScrollingComponent = () => {
-//   return (
-//     <div className="h-64 overflow-y-auto border border-gray-300 p-4">
-//       <h2 className="text-xl font-bold mb-2">Scrollable Content</h2>
-//       <div>
-//         {/* Add a lot of content here to enable scrolling */}
-//         {Array.from({ length: 2 }).map((_, index) => (
-//           <div key={index} className="mb-2 p-2 bg-blue-500 text-white rounded">
-//             Item {index + 1}
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
