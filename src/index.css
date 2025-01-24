@@ -18,10 +18,7 @@
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
 }
-.custom-date-input::-webkit-calendar-picker-indicator {
-  filter: invert(1);
-  cursor: pointer;
-}
+
 @layer components {
   .max-container {
     max-width: 1440px;
